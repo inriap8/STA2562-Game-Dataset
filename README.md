@@ -5,74 +5,56 @@
 <h1 align="center">Game Platform Dashboard</h1>
 
 <p align="center">
-Explore insights and trends from game data
+<h2 align="center">Explore Insights and Trends from Game Data</h2>
 </p>
 
 ---
 
-<h2 align="center">Menu</h2>
+<h2 align="center">📌 Menu</h2>
 
-<table align="center" cellspacing="12">
+<br>
+
+<table align="center" cellpadding="12">
 <tr>
-
 <td align="center">
-<a href="#1-description-about-dashboard" style="text-decoration:none;">
-<div style="background-color:#A5D8FF; color:#1f2937; padding:10px 18px; border-radius:8px; width:190px; font-size:13px;">
-<b>1</b><br>
-DESCRIPTION
-</div>
+<a href="#1-description-about-dashboard">
+  <img src="https://img.shields.io/badge/1-Description%20About%20Dashboard-A5D8FF?style=for-the-badge"/>
 </a>
 </td>
 
 <td align="center">
-<a href="#2-dashboard-section" style="text-decoration:none;">
-<div style="background-color:#B2F2BB; color:#1f2937; padding:10px 18px; border-radius:8px; width:190px; font-size:13px;">
-<b>2</b><br>
-DASHBOARD
-</div>
+<a href="#2-dashboard-section">
+  <img src="https://img.shields.io/badge/2-Dashboard%20Section-B2F2BB?style=for-the-badge"/>
 </a>
 </td>
-
-<td align="center">
-<a href="#3-database-schema--data-structure" style="text-decoration:none;">
-<div style="background-color:#FFD6A5; color:#1f2937; padding:10px 18px; border-radius:8px; width:190px; font-size:13px;">
-<b>3</b><br>
-DATABASE
-</div>
-</a>
-</td>
-
 </tr>
 
 <tr>
-
 <td align="center">
-<a href="#4-team-contribution" style="text-decoration:none;">
-<div style="background-color:#FFADAD; color:#1f2937; padding:10px 18px; border-radius:8px; width:190px; font-size:13px;">
-<b>4</b><br>
-TEAM
-</div>
+<a href="#3-database-schema--data-structure">
+  <img src="https://img.shields.io/badge/3-Database%20Schema-FFD6A5?style=for-the-badge"/>
 </a>
 </td>
 
 <td align="center">
-<a href="#5-project-folder-structure" style="text-decoration:none;">
-<div style="background-color:#CDB4DB; color:#1f2937; padding:10px 18px; border-radius:8px; width:190px; font-size:13px;">
-<b>5</b><br>
-STRUCTURE
-</div>
+<a href="#4-team-contribution">
+  <img src="https://img.shields.io/badge/4-Team%20Contribution-FFADAD?style=for-the-badge"/>
+</a>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<a href="#5-project-folder-structure">
+  <img src="https://img.shields.io/badge/5-Project%20Structure-CDB4DB?style=for-the-badge"/>
 </a>
 </td>
 
 <td align="center">
-<a href="#6-nama-kelompok" style="text-decoration:none;">
-<div style="background-color:#90DBF4; color:#1f2937; padding:10px 18px; border-radius:8px; width:190px; font-size:13px;">
-<b>6</b><br>
-KELOMPOK
-</div>
+<a href="#6-nama-kelompok">
+  <img src="https://img.shields.io/badge/6-Nama%20Kelompok-90DBF4?style=for-the-badge"/>
 </a>
 </td>
-
 </tr>
 </table>
 
