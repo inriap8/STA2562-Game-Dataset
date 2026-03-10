@@ -217,17 +217,23 @@ Menampilkan profil anggota tim dan peran masing-masing.
 
 ---
 
-# 3. Database Schema & Data Structure
+# 3. Database Schema & ERD
+
+<p align="center">
+  <img src="Images/Skema Tabel.png" width="900">
+</p>
+
 
 Database relasional dengan tabel utama:
 
-- `tbl_games`  
-- `tbl_reviews`  
-- `tbl_users`  
-- `tbl_genres`  
-- `tbl_platforms`  
-- `tbl_developers`  
-- `tbl_publisher`  
+- `tbl_games`: Menyimpan informasi dasar tentang setiap game, termasuk id, judul, tanggal rilis, rating pengguna (exceptional, recommended, meh, skip), age rating, metascore, about, link url, dan link gambar dan video preview.  
+- `tbl_reviews`: Mencatat review yang diberikan oleh pengguna, termasuk ID review, ID game terkait, ID pengguna, isi review dan tanggal review.  
+- `tbl_users`: Berisi informasi tentang pengguna yang membuat review, termasuk username, dan ID pengguna.  
+- `tbl_genres`: Menyimpan daftar ID genre dan jenis genre game yang ada di database, misal Action, RPG, Adventure, dan lain-lain. 
+- `tbl_platforms`: Mencatat ID platform dan jenis platform tempat game dirilis/dimainkan, misal PC, PlayStation, Xbox, Nintendo Switch, dan sebagainya.  
+- `tbl_developers`: Menampung informasi ID pengembang game (developer) dan termasuk nama dan detail perusahaan/pengelola studio.  
+- `tbl_publisher`: Berisi informasi ID penerbit (publisher) game dan termasuk nama dan detail perusahaan yang merilis game ke pasar.
+ 
 
 ### ERD
 
@@ -235,11 +241,12 @@ Database relasional dengan tabel utama:
 
 *ERD menunjukkan relasi antar tabel utama dan foreign key.*
 
-### Skema Tabel
-
-![Skema Tabel](Images/Skema Tabel.png)
-
-*Skema tabel menampilkan detail kolom, tipe data, dan constraints.*
+| Tabel Relasi     | Atribut                | Primary Key (PK)         | Foreign Key (FK)                       | Keterangan Singkat |
+|-----------------|-----------------------|------------------------|---------------------------------------|-----------------|
+| DEVELOPED_BY     | developer_id, game_id | (developer_id, game_id) | developer_id → DEVELOPER.developer_id, game_id → GAME.game_id | Menghubungkan game dengan developer |
+| PUBLISHED_BY     | publisher_id, game_id | (publisher_id, game_id) | publisher_id → PUBLISHER.publisher_id, game_id → GAME.game_id | Menghubungkan game dengan publisher |
+| HAS              | genre_id, game_id     | (genre_id, game_id)    | genre_id → GENRE.genre_id, game_id → GAME.game_id | Menghubungkan game dengan genre |
+| AVAILABLE_ON     | platform_id, game_id  | (platform_id, game_id) | platform_id → PLATFORM.platform_id, game_id → GAME.game_id | Menghubungkan game dengan platform |
 
 ---
 
