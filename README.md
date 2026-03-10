@@ -2,16 +2,14 @@
   <img src="Images/Header Github.jpeg" width="900">
 </p>
 
-<h1 align="center">Game Platform Dashboard</h1>
-
 <p align="center">
-<h3 align="center">_Explore Insights and Trends from Game Data_</h3>
+<h3 align="center"> Explore Insights and Trends from Game Data </h3>
 </p>
 
 ---
 
 <p align="center">
-  <img src="Images/Menu.png" width="300">
+  <img src="Images/Menu.png" width="400">
 </p>
 
 
@@ -68,10 +66,11 @@
 </td>
 </tr>
 </table>
+
 ---
 
 <p align="center">
-  <img src="Images/Dashboard Desc.png" width="500">
+  <img src="Images/Deskripsi.png" width="500">
 </p> 
 
 Game Platform Dashboard adalah aplikasi interaktif berbasis **R Shiny** yang dirancang untuk menganalisis dan memvisualisasikan data game dari berbagai aspek.
@@ -92,7 +91,9 @@ Game Platform Dashboard adalah aplikasi interaktif berbasis **R Shiny** yang dir
 
 ---
 
-# 2. Dashboard Section
+<p align="center">
+  <img src="Images/Bagian.png" width="500">
+</p> 
 
 ## Home
 Menampilkan:
@@ -222,7 +223,9 @@ Menampilkan profil anggota tim dan peran masing-masing.
 
 ---
 
-# 3. Database Schema & ERD
+<p align="center">
+  <img src="Images/Skema.png" width="500">
+</p> 
 
 ### Skema Tabel
 
@@ -250,7 +253,7 @@ Database relasional dengan tabel utama:
 
 Dashboard ini menggunakan struktur database relasional dengan tabel utama dan relasinya. Berikut penjelasan primary key dan foreign key tiap tabel:
 
-### Primary Key (PK)
+#### Primary Key (PK)
 - `game_id` (tabel GAME)
 - `review_id` (tabel REVIEW)
 - `user_id` (tabel USER)
@@ -259,7 +262,7 @@ Dashboard ini menggunakan struktur database relasional dengan tabel utama dan re
 - `genre_id` (tabel GENRE)
 - `platform_id` (tabel PLATFORM)
 
-### Foreign Key (FK)
+#### Foreign Key (FK)
 - `developer_id` pada tabel GAME → menghubungkan ke tabel DEVELOPER
 - `publisher_id` pada tabel GAME → menghubungkan ke tabel PUBLISHER
 - `genre_id` pada tabel GAME → menghubungkan ke tabel GENRE
@@ -267,14 +270,12 @@ Dashboard ini menggunakan struktur database relasional dengan tabel utama dan re
 - `game_id` pada tabel REVIEW → menghubungkan ke tabel GAME
 - `user_id` pada tabel REVIEW → menghubungkan ke tabel USER
 
-### Relasi Tabel
+#### Relasi Tabel
 - Tabel DEVELOPED_BY menghubungkan `developer_id` dan `game_id`
 - Tabel PUBLISHED_BY menghubungkan `publisher_id` dan `game_id`
 - Tabel HAS menghubungkan `genre_id` dan `game_id`
 - Tabel AVAILABLE_ON menghubungkan `platform_id` dan `game_id`
 - Tabel WRITES menghubungkan `review_id`, `game_id`, dan `user_id`
-
----
 
 **Catatan:**  
 - Primary key memastikan setiap record unik di tabelnya.  
@@ -283,7 +284,9 @@ Dashboard ini menggunakan struktur database relasional dengan tabel utama dan re
 
 ---
 
-# 4. Tools Used
+<p align="center">
+  <img src="Images/Tools.png" width="350">
+</p> 
 
 | Tool | Fungsi | Gambar |
 |------|-------|--------|
@@ -294,7 +297,9 @@ Dashboard ini menggunakan struktur database relasional dengan tabel utama dan re
 
 ---
 
-# 5. Project Folder Structure
+<p align="center">
+  <img src="Images/Folder.png" width="400">
+</p> 
 
 ```bash
 project-dashboard/
