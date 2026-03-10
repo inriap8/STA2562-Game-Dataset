@@ -104,16 +104,113 @@ Fitur pencarian dan filter interaktif:
 - Download CSV hasil filter
 
 ## Overview
-Menampilkan analisis statistik dan visualisasi:
+Menampilkan analisis statistik dan visualisasi utama dari data game untuk memahami tren, performa, dan popularitas. Berikut detail setiap visualisasi:
 
-- Genre paling populer berdasarkan review
-- Distribusi score game
-- Top 10 game berdasarkan score
-- Top 10 game berdasarkan jumlah review
-- Game dengan metascore tertinggi
-- Genre dengan rata-rata score tertinggi
-- Tren rilis game per tahun
-- Insight Cards: Peak release, score distribution, review concentration, user vs critic score
+---
+
+### 1. Game Releases Over Time
+Menunjukkan tren jumlah rilis game per tahun sehingga dapat mengidentifikasi periode dengan aktivitas rilis tertinggi.
+<p align="center">
+  <img src="Images/Game Releases Over Time.jpeg" width="600">
+</p>
+
+---
+
+### 2. Game Score Distribution
+Distribusi skor game membantu melihat persebaran kualitas game berdasarkan rating pengguna.
+<p align="center">
+  <img src="Images/Game Score Distribution.jpeg" width="600">
+</p>
+
+---
+
+### 3. Games Highest Metascore
+Menampilkan game dengan nilai kritikus tertinggi, berguna untuk analisis kualitas review profesional.
+<p align="center">
+  <img src="Images/Games Highest Metascore.png" width="500">
+</p>
+
+---
+
+### 4. Games Highest Score
+Menunjukkan game dengan skor pengguna tertinggi, membantu menilai kepuasan pemain.
+<p align="center">
+  <img src="Images/Games Highest Score.png" width="500">
+</p>
+
+---
+
+### 5. Genre Highest Average Score
+Mengidentifikasi genre dengan rata-rata skor tertinggi, berguna untuk rekomendasi genre populer.
+<p align="center">
+  <img src="Images/Genre Highest Average Score.png" width="500">
+</p>
+
+---
+
+### 6. Genre Popularity Based on Reviews
+Visualisasi genre paling populer berdasarkan jumlah review, menilai engagement komunitas.
+<p align="center">
+  <img src="Images/Genre Popularity Based on Reviews.jpeg" width="500">
+</p>
+
+---
+
+### 7. Key Insights
+Menyediakan ringkasan insight utama dari data game seperti peak release, score distribution, dan review concentration.
+<p align="center">
+  <img src="Images/Key Insights.png" width="600">
+</p>
+
+---
+
+### 8. Most Popular Age Rating
+Menampilkan age rating dengan jumlah game terbanyak untuk mengetahui target audiens dominan.
+<p align="center">
+  <img src="Images/Most Popular Age Rating.png" width="500">
+</p>
+
+---
+
+### 9. Most Popular Genre
+Menunjukkan genre dengan total review terbanyak, berguna untuk analisis popularitas.
+<p align="center">
+  <img src="Images/Most Popular Genre.png" width="500">
+</p>
+
+---
+
+### 10. Most Popular Platform
+Menampilkan platform game paling populer berdasarkan jumlah occurrences/total review.
+<p align="center">
+  <img src="Images/Most Popular Platform.png" width="500">
+</p>
+
+---
+
+### 11. Review Overview
+Memberikan overview jumlah review per game, membandingkan review user vs critic.
+<p align="center">
+  <img src="Images/Review Overview.jpeg" width="600">
+</p>
+
+---
+
+### 12. Top Game 2016
+Menunjukkan game terbaik tahun 2016 berdasarkan skor dan jumlah review.
+<p align="center">
+  <img src="Images/Top Game 2016.png" width="500">
+</p>
+
+---
+
+### 13. Top Games by Score
+Menampilkan daftar 10 game terbaik berdasarkan skor, termasuk perbandingan skor pengguna dan kritikus.
+<p align="center">
+  <img src="Images/Top Games by Score.jpeg" width="600">
+</p>
+
+---
 
 ## About Team
 Menampilkan profil anggota tim dan peran masing-masing.
