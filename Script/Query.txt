@@ -1,0 +1,385 @@
+# =============================
+# HOME
+# =============================
+
+# TOTAL GAME
+SELECT COUNT(*) AS total FROM tbl_games;
+
+
+# TOTAL REVIEW
+SELECT COUNT(*) AS total FROM tbl_reviews;
+
+
+# SLIDER
+      SELECT game_title, about, game_image_url, game_video_preview_url, game_url
+      FROM tbl_games
+      ORDER BY metascore DESC
+      LIMIT 5
+
+
+# AGE_RATING RECOMMENDATION
+SELECT *
+FROM (
+    SELECT 
+        g.game_id,
+        g.game_title,
+        g.age_rating,
+        g.game_image_url,
+        g.game_url,
+
+        ROUND(
+            (
+                (g.rating_exceptional * 4) +
+                (g.rating_recommended * 3) +
+                (g.rating_meh * 2) +
+                (g.rating_skip * 1)
+            ) /
+            NULLIF(
+                (g.rating_exceptional +
+                 g.rating_recommended +
+                 g.rating_meh +
+                 g.rating_skip), 0
+            ), 2
+        ) AS game_score,
+
+        ROW_NUMBER() OVER (
+            PARTITION BY g.age_rating
+            ORDER BY
+                ROUND(
+                    (
+                        (g.rating_exceptional * 4) +
+                        (g.rating_recommended * 3) +
+                        (g.rating_meh * 2) +
+                        (g.rating_skip * 1)
+                    ) /
+                    NULLIF(
+                        (g.rating_exceptional +
+                         g.rating_recommended +
+                         g.rating_meh +
+                         g.rating_skip), 0
+                    ), 2
+                ) DESC
+        ) AS rn
+
+    FROM tbl_games g
+    WHERE g.age_rating NOT IN ('Not Rated', 'Rating Pending')
+
+) ranked
+WHERE rn = 1
+ORDER BY game_score DESC;
+
+
+# GENRE RECOMMENDATION
+SELECT *
+FROM (
+    SELECT 
+        ge.genre_name,
+        g.game_id,
+        g.game_title,
+        g.game_image_url,
+        g.game_url,
+
+        ROUND(
+            (
+                (g.rating_exceptional * 4) +
+                (g.rating_recommended * 3) +
+                (g.rating_meh * 2) +
+                (g.rating_skip * 1)
+            ) /
+            NULLIF(
+                (g.rating_exceptional +
+                 g.rating_recommended +
+                 g.rating_meh +
+                 g.rating_skip), 0
+            ), 2
+        ) AS game_score,
+
+        ROW_NUMBER() OVER (
+            PARTITION BY ge.genre_id
+            ORDER BY
+                ROUND(
+                    (
+                        (g.rating_exceptional * 4) +
+                        (g.rating_recommended * 3) +
+                        (g.rating_meh * 2) +
+                        (g.rating_skip * 1)
+                    ) /
+                    NULLIF(
+                        (g.rating_exceptional +
+                         g.rating_recommended +
+                         g.rating_meh +
+                         g.rating_skip), 0
+                    ), 2
+                ) DESC
+        ) AS rn
+
+    FROM tbl_games g
+    JOIN tbl_game_genres gg ON g.game_id = gg.game_id
+    JOIN tbl_genres ge ON gg.genre_id = ge.genre_id
+
+) ranked
+WHERE rn = 1
+ORDER BY game_score DESC
+
+
+
+# =============================
+# SEARCH
+# =============================
+
+# Kolom berisi game_id, game_title, genres, age_rating, game_score, platforms
+SELECT 
+    g.game_id,
+    g.game_title,
+    g.game_url,
+    g.age_rating,
+
+    ROUND(
+        (
+            (g.rating_exceptional * 4) +
+            (g.rating_recommended * 3) +
+            (g.rating_meh * 2) +
+            (g.rating_skip * 1)
+        ) /
+        NULLIF(
+            (g.rating_exceptional +
+             g.rating_recommended +
+             g.rating_meh +
+             g.rating_skip), 0
+        ), 2
+    ) AS game_score,
+
+    GROUP_CONCAT(DISTINCT ge.genre_name SEPARATOR ', ') AS genres,
+    GROUP_CONCAT(DISTINCT p.platform_name SEPARATOR ', ') AS platforms
+
+FROM tbl_games g
+LEFT JOIN tbl_game_genres gg ON g.game_id = gg.game_id
+LEFT JOIN tbl_genres ge ON gg.genre_id = ge.genre_id
+LEFT JOIN tbl_game_platforms gp ON g.game_id = gp.game_id
+LEFT JOIN tbl_platforms p ON gp.platform_id = p.platform_id
+
+GROUP BY g.game_id
+ORDER BY g.game_title;
+
+
+# Filter
+SELECT DISTINCT genre_name FROM tbl_genres ORDER BY genre_name;
+
+SELECT DISTINCT platform_name FROM tbl_platforms ORDER BY platform_name;
+
+SELECT DISTINCT age_rating
+FROM tbl_games
+ORDER BY FIELD(
+    age_rating,
+    'Everyone (0+)',
+    'Everyone 10+ (10+)',
+    'Teen (13+)',
+    'Mature (17+)',
+    'Adults Only (18+)',
+    'Not rated',
+    'Rating Pending'
+);
+
+
+
+# =============================
+# OVERVIEW 
+# =============================
+
+# most popular genre 
+SELECT 
+    ge.genre_name,
+    COUNT(r.review_id) AS total_review
+FROM tbl_genres ge
+JOIN tbl_game_genres gg ON ge.genre_id = gg.genre_id
+JOIN tbl_reviews r ON gg.game_id = r.game_id
+GROUP BY ge.genre_id
+ORDER BY total_review DESC
+LIMIT 1;
+
+
+# Pie chart menampilkan genre terpopuler (dalam persen)
+SELECT 
+    ge.genre_name,
+    COUNT(r.review_id) AS total_review,
+    ROUND(
+        COUNT(r.review_id) * 100.0 /
+        (SELECT COUNT(*) FROM tbl_reviews),
+    2) AS percentage
+FROM tbl_genres ge
+JOIN tbl_game_genres gg ON ge.genre_id = gg.genre_id
+JOIN tbl_reviews r ON gg.game_id = r.game_id
+GROUP BY ge.genre_id
+ORDER BY total_review DESC;
+
+
+# nama game dengan game_score tertinggi 
+SELECT 
+    g.game_title,
+    ROUND(
+        (
+            (g.rating_exceptional * 4) +
+            (g.rating_recommended * 3) +
+            (g.rating_meh * 2) +
+            (g.rating_skip * 1)
+        ) /
+        NULLIF(
+            (g.rating_exceptional +
+             g.rating_recommended +
+             g.rating_meh +
+             g.rating_skip), 0
+        ), 2
+    ) AS game_score
+FROM tbl_games g
+ORDER BY game_score DESC
+LIMIT 1;
+
+
+# nama game dengan metascore tertinggi 
+SELECT 
+    game_title,
+    metascore
+FROM tbl_games
+ORDER BY metascore DESC
+LIMIT 1;
+
+
+# Top 10 games tertinggi berdasarkan game_score yang berisi game_title, game_score, total_vote, metascore
+SELECT 
+    g.game_title,
+
+    ROUND(
+        (
+            (g.rating_exceptional * 4) +
+            (g.rating_recommended * 3) +
+            (g.rating_meh * 2) +
+            (g.rating_skip * 1)
+        ) /
+        NULLIF(
+            (g.rating_exceptional +
+             g.rating_recommended +
+             g.rating_meh +
+             g.rating_skip), 0
+        ), 2
+    ) AS game_score,
+
+    (g.rating_exceptional +
+     g.rating_recommended +
+     g.rating_meh +
+     g.rating_skip) AS total_vote,
+
+    g.metascore
+
+FROM tbl_games g
+ORDER BY game_score DESC
+LIMIT 10;
+
+
+# Top 10 game dengan review terbanyak
+SELECT 
+    g.game_title,
+    COUNT(r.review_id) AS total_review
+FROM tbl_games g
+JOIN tbl_reviews r ON g.game_id = r.game_id
+GROUP BY g.game_title
+ORDER BY total_review DESC
+LIMIT 10;
+
+
+# 5 review dari game dengan review terbanyak dipilih berdasarkan review_date terbaru
+SELECT 
+    u.username,
+    r.review_text,
+    r.review_date
+FROM tbl_reviews r
+JOIN tbl_users u ON r.user_id = u.user_id
+WHERE r.game_id = (
+    SELECT game_id
+    FROM (
+        SELECT g.game_id
+        FROM tbl_games g
+        JOIN tbl_reviews r2 ON g.game_id = r2.game_id
+        GROUP BY g.game_id
+        ORDER BY COUNT(r2.review_id) DESC
+        LIMIT 1
+    ) AS subquery
+)
+ORDER BY r.review_date DESC
+LIMIT 5;
+
+
+# game_release tren
+SELECT 
+    YEAR(release_date) AS release_year,
+    COUNT(*) AS total_game
+FROM tbl_games
+GROUP BY YEAR(release_date)
+ORDER BY release_year;
+
+
+# popular_game_2016
+    SELECT g.game_title, COUNT(r.review_id) AS total_review
+    FROM tbl_games g
+    JOIN tbl_reviews r ON g.game_id = r.game_id
+    WHERE g.release_date IS NOT NULL AND YEAR(g.release_date) = 2016
+    GROUP BY g.game_id, g.game_title
+    ORDER BY total_review DESC
+    LIMIT 1;
+
+
+# top_platform_played
+    SELECT p.platform_name, COUNT(*) AS total_usage
+    FROM tbl_game_platforms gp
+    JOIN tbl_platforms p ON gp.platform_id = p.platform_id
+    GROUP BY p.platform_id, p.platform_name
+    ORDER BY total_usage DESC
+    LIMIT 1;
+
+
+# top_age_rating 
+    SELECT age_rating, COUNT(*) AS total_game
+    FROM tbl_games
+    WHERE age_rating IS NOT NULL AND TRIM(age_rating) <> ''
+    GROUP BY age_rating
+    ORDER BY total_game DESC
+    LIMIT 1;
+  
+
+# score_dist
+    SELECT
+      ROUND(
+        (
+          (rating_exceptional * 4) +
+          (rating_recommended * 3) +
+          (rating_meh * 2) +
+          (rating_skip * 1)
+        ) /
+        NULLIF((rating_exceptional + rating_recommended + rating_meh + rating_skip), 0), 2
+      ) AS score
+    FROM tbl_games
+    WHERE (rating_exceptional + rating_recommended + rating_meh + rating_skip) > 0;
+  "
+q_best_avg_genre <- "
+SELECT 
+  ge.genre_name,
+  ROUND(AVG(
+    (
+      (g.rating_exceptional * 4) +
+      (g.rating_recommended * 3) +
+      (g.rating_meh * 2) +
+      (g.rating_skip * 1)
+    ) /
+    NULLIF(
+      (g.rating_exceptional +
+       g.rating_recommended +
+       g.rating_meh +
+       g.rating_skip), 0
+    )
+  ), 2) AS avg_score
+FROM tbl_games g
+JOIN tbl_game_genres gg ON g.game_id = gg.game_id
+JOIN tbl_genres ge ON gg.genre_id = ge.genre_id
+WHERE (g.rating_exceptional + g.rating_recommended + g.rating_meh + g.rating_skip) > 0
+GROUP BY ge.genre_name
+ORDER BY avg_score DESC
+LIMIT 1;
