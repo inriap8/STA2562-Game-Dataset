@@ -112,15 +112,11 @@ Fitur pencarian dan filter interaktif:
 ## Overview
 Menampilkan analisis statistik dan visualisasi utama dari data game untuk memahami tren, performa, dan popularitas. Berikut detail setiap visualisasi:
 
----
-
 ### 1. Game Releases Over Time
 Menunjukkan tren jumlah rilis game per tahun sehingga dapat mengidentifikasi periode dengan aktivitas rilis tertinggi.
 <p align="center">
   <img src="Images/Game Releases Over Time.jpeg" width="600">
 </p>
-
----
 
 ### 2. Game Score Distribution
 Distribusi skor game membantu melihat persebaran kualitas game berdasarkan rating pengguna.
@@ -128,15 +124,11 @@ Distribusi skor game membantu melihat persebaran kualitas game berdasarkan ratin
   <img src="Images/Game Score Distribution.jpeg" width="600">
 </p>
 
----
-
 ### 3. Games Highest Metascore
 Menampilkan game dengan nilai kritikus tertinggi, berguna untuk analisis kualitas review profesional.
 <p align="center">
   <img src="Images/Games Highest Metascore.png" width="500">
 </p>
-
----
 
 ### 4. Games Highest Score
 Menunjukkan game dengan skor pengguna tertinggi, membantu menilai kepuasan pemain.
@@ -144,15 +136,11 @@ Menunjukkan game dengan skor pengguna tertinggi, membantu menilai kepuasan pemai
   <img src="Images/Games Highest Score.png" width="500">
 </p>
 
----
-
 ### 5. Genre Highest Average Score
 Mengidentifikasi genre dengan rata-rata skor tertinggi, berguna untuk rekomendasi genre populer.
 <p align="center">
   <img src="Images/Genre Highest Average Score.png" width="500">
 </p>
-
----
 
 ### 6. Genre Popularity Based on Reviews
 Visualisasi genre paling populer berdasarkan jumlah review, menilai engagement komunitas.
@@ -160,15 +148,11 @@ Visualisasi genre paling populer berdasarkan jumlah review, menilai engagement k
   <img src="Images/Genre Popularity Based on Reviews.jpeg" width="500">
 </p>
 
----
-
 ### 7. Most Popular Age Rating
 Menampilkan age rating dengan jumlah game terbanyak untuk mengetahui target audiens dominan.
 <p align="center">
   <img src="Images/Most Popular Age Rating.png" width="500">
 </p>
-
----
 
 ### 8. Most Popular Genre
 Menunjukkan genre dengan total review terbanyak, berguna untuk analisis popularitas.
@@ -176,15 +160,11 @@ Menunjukkan genre dengan total review terbanyak, berguna untuk analisis populari
   <img src="Images/Most Popular Genre.png" width="500">
 </p>
 
----
-
 ### 9. Most Popular Platform
 Menampilkan platform game paling populer berdasarkan jumlah occurrences/total review.
 <p align="center">
   <img src="Images/Most Popular Platform.png" width="500">
 </p>
-
----
 
 ### 10. Review Overview
 Memberikan overview jumlah review per game, membandingkan review user vs critic.
@@ -192,15 +172,11 @@ Memberikan overview jumlah review per game, membandingkan review user vs critic.
   <img src="Images/Review Overview.jpeg" width="600">
 </p>
 
----
-
 ### 11. Top Game 2016
 Menunjukkan game terbaik tahun 2016 berdasarkan skor dan jumlah review.
 <p align="center">
   <img src="Images/Top Game 2016.png" width="500">
 </p>
-
----
 
 ### 12. Top Games by Score
 Menampilkan daftar 10 game terbaik berdasarkan skor, termasuk perbandingan skor pengguna dan kritikus.
@@ -208,15 +184,11 @@ Menampilkan daftar 10 game terbaik berdasarkan skor, termasuk perbandingan skor 
   <img src="Images/Top Games by Score.jpeg" width="600">
 </p>
 
----
-
 ### 13. Key Insights
 Menyediakan ringkasan insight utama dari data game seperti peak release, score distribution, dan review concentration.
 <p align="center">
   <img src="Images/Key Insights.png" width="600">
 </p>
-
----
 
 ## About Team
 Menampilkan profil anggota tim dan peran masing-masing.
@@ -290,10 +262,10 @@ Dashboard ini menggunakan struktur database relasional dengan tabel utama dan re
 
 | Tool | Fungsi | Gambar |
 |------|-------|--------|
-| **R Studio** | IDE & Language – Lingkungan utama pengembangan skrip R dan manajemen proyek | ![RStudio](Images/5325b05b-d07f-481a-abc2-84dec8849b19.png) |
-| **R Shiny** | Web Framework – Membangun dashboard interaktif dan reaktivitas visualisasi | ![R Shiny](Images/R Shiny.png) |
-| **DBngin** | DB Engine – Menjalankan mesin database lokal untuk penyimpanan data relasional | ![DBngin](Images/DBngin.png) |
-| **TablePlus** | DB Management – Mengelola skema tabel, relasi, dan memvalidasi query SQL secara visual | ![TablePlus](Images/TablePlus.png) |
+| **R Studio** | IDE & Language – Lingkungan utama pengembangan skrip R dan manajemen proyek | <div align="center"><img src="Images/Rstudio.png" width="50"></div> |
+| **R Shiny** | Web Framework – Membangun dashboard interaktif dan reaktivitas visualisasi | <div align="center"><img src="Images/R Shiny.png" width="100"></div> |
+| **DBngin** | DB Engine – Menjalankan mesin database lokal untuk penyimpanan data relasional | <div align="center"><img src="Images/Dbngin.png" width="55"></div> |
+| **TablePlus** | DB Management – Mengelola skema tabel, relasi, dan memvalidasi query SQL secara visual | <div align="center"><img src="Images/Tableplus.png" width="55"></div> |
 
 ---
 
