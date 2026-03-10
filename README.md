@@ -226,8 +226,8 @@ Database relasional dengan tabel utama:
 - `tbl_users`  
 - `tbl_genres`  
 - `tbl_platforms`  
-- `tbl_game_genres`  
-- `tbl_game_platforms`  
+- `tbl_developers`  
+- `tbl_publisher`  
 
 ### ERD
 
