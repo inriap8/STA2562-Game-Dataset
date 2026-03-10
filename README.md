@@ -70,7 +70,9 @@
 </table>
 ---
 
-# 1. Dashboard Description 
+<p align="center">
+  <img src="Images/Dashboard Desc.png" width="500">
+</p> 
 
 Game Platform Dashboard adalah aplikasi interaktif berbasis **R Shiny** yang dirancang untuk menganalisis dan memvisualisasikan data game dari berbagai aspek.
 
