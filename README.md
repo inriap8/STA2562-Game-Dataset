@@ -241,12 +241,38 @@ Database relasional dengan tabel utama:
 
 *ERD menunjukkan relasi antar tabel utama dan foreign key.*
 
-| Tabel Relasi     | Atribut                | Primary Key (PK)         | Foreign Key (FK)                       | Keterangan Singkat |
-|-----------------|-----------------------|------------------------|---------------------------------------|-----------------|
-| DEVELOPED_BY     | developer_id, game_id | (developer_id, game_id) | developer_id → DEVELOPER.developer_id, game_id → GAME.game_id | Menghubungkan game dengan developer |
-| PUBLISHED_BY     | publisher_id, game_id | (publisher_id, game_id) | publisher_id → PUBLISHER.publisher_id, game_id → GAME.game_id | Menghubungkan game dengan publisher |
-| HAS              | genre_id, game_id     | (genre_id, game_id)    | genre_id → GENRE.genre_id, game_id → GAME.game_id | Menghubungkan game dengan genre |
-| AVAILABLE_ON     | platform_id, game_id  | (platform_id, game_id) | platform_id → PLATFORM.platform_id, game_id → GAME.game_id | Menghubungkan game dengan platform |
+Dashboard ini menggunakan struktur database relasional dengan tabel utama dan relasinya. Berikut penjelasan primary key dan foreign key tiap tabel:
+
+### Primary Key (PK)
+- `game_id` (tabel GAME)
+- `review_id` (tabel REVIEW)
+- `user_id` (tabel USER)
+- `developer_id` (tabel DEVELOPER)
+- `publisher_id` (tabel PUBLISHER)
+- `genre_id` (tabel GENRE)
+- `platform_id` (tabel PLATFORM)
+
+### Foreign Key (FK)
+- `developer_id` pada tabel GAME → menghubungkan ke tabel DEVELOPER
+- `publisher_id` pada tabel GAME → menghubungkan ke tabel PUBLISHER
+- `genre_id` pada tabel GAME → menghubungkan ke tabel GENRE
+- `platform_id` pada tabel GAME → menghubungkan ke tabel PLATFORM
+- `game_id` pada tabel REVIEW → menghubungkan ke tabel GAME
+- `user_id` pada tabel REVIEW → menghubungkan ke tabel USER
+
+### Relasi Tabel
+- Tabel DEVELOPED_BY menghubungkan `developer_id` dan `game_id`
+- Tabel PUBLISHED_BY menghubungkan `publisher_id` dan `game_id`
+- Tabel HAS menghubungkan `genre_id` dan `game_id`
+- Tabel AVAILABLE_ON menghubungkan `platform_id` dan `game_id`
+- Tabel WRITES menghubungkan `review_id`, `game_id`, dan `user_id`
+
+---
+
+**Catatan:**  
+- Primary key memastikan setiap record unik di tabelnya.  
+- Foreign key menghubungkan tabel transaksi atau referensi ke tabel master, menjaga integritas data.  
+- Relasi N:M ditangani melalui tabel relasi seperti DEVELOPED_BY, PUBLISHED_BY, HAS, dan AVAILABLE_ON.
 
 ---
 
