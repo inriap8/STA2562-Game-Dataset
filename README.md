@@ -5,12 +5,15 @@
 <h1 align="center">Game Platform Dashboard</h1>
 
 <p align="center">
-<h3 align="center">Explore Insights and Trends from Game Data</h3>
+<h3 align="center">_Explore Insights and Trends from Game Data_</h3>
 </p>
 
 ---
 
-<h2 align="center">📌 Menu</h2>
+<p align="center">
+  <img src="Images/Menu.png" width="300">
+</p>
+
 
 <br>
 
