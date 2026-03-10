@@ -5,7 +5,7 @@
 <h1 align="center">Game Platform Dashboard</h1>
 
 <p align="center">
-<h2 align="center">Explore Insights and Trends from Game Data</h2>
+<h3 align="center">Explore Insights and Trends from Game Data</h3>
 </p>
 
 ---
@@ -17,8 +17,8 @@
 <table align="center" cellpadding="12">
 <tr>
 <td align="center">
-<a href="#1-description-about-dashboard">
-  <img src="https://img.shields.io/badge/1-Description%20About%20Dashboard-A5D8FF?style=for-the-badge"/>
+<a href="#1-dashboard-description">
+  <img src="https://img.shields.io/badge/1-Dashboard%20Description-A5D8FF?style=for-the-badge"/>
 </a>
 </td>
 
@@ -32,13 +32,13 @@
 <tr>
 <td align="center">
 <a href="#3-database-schema--data-structure">
-  <img src="https://img.shields.io/badge/3-Database%20Schema-FFD6A5?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/3-Database%20Schema%20&%20Data-FFD6A5?style=for-the-badge"/>
 </a>
 </td>
 
 <td align="center">
-<a href="#4-team-contribution">
-  <img src="https://img.shields.io/badge/4-Team%20Contribution-FFADAD?style=for-the-badge"/>
+<a href="#4-tools-used">
+  <img src="https://img.shields.io/badge/4-Tools%20Used-FFADAD?style=for-the-badge"/>
 </a>
 </td>
 </tr>
@@ -46,79 +46,65 @@
 <tr>
 <td align="center">
 <a href="#5-project-folder-structure">
-  <img src="https://img.shields.io/badge/5-Project%20Structure-CDB4DB?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/5-Project%20Folder%20Structure-CDB4DB?style=for-the-badge"/>
 </a>
 </td>
 
 <td align="center">
-<a href="#6-nama-kelompok">
-  <img src="https://img.shields.io/badge/6-Nama%20Kelompok-90DBF4?style=for-the-badge"/>
+<a href="#6-team-contribution">
+  <img src="https://img.shields.io/badge/6-Team%20Contribution-90DBF4?style=for-the-badge"/>
+</a>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<a href="#7-team-members">
+  <img src="https://img.shields.io/badge/7-Team%20Members-7CE0F3?style=for-the-badge"/>
 </a>
 </td>
 </tr>
 </table>
-
 ---
 
-# 1. Description About Dashboard
+# 1. Dashboard Description 
 
 Game Platform Dashboard adalah aplikasi interaktif berbasis **R Shiny** yang dirancang untuk menganalisis dan memvisualisasikan data game dari berbagai aspek.
 
-Dashboard ini terhubung dengan database **MariaDB** dan memanfaatkan:
+**Tujuan Proyek:**
 
-- 📊 Visualisasi interaktif menggunakan **Plotly**
-- 📋 Tabel dinamis menggunakan **DT**
-- 🔄 Reactive programming pada Shiny
+- Memberikan insight performa dan popularitas game berdasarkan rating dan review
+- Menyediakan rekomendasi game sesuai usia (Age Rating) dan genre
+- Memvisualisasikan tren rilis game dan distribusi score
+- Membantu analisis keputusan bisnis bagi pengembang dan pemain game
+
+**Fitur utama:**
+
+- 📊 Visualisasi interaktif menggunakan **Plotly**  
+- 📋 Tabel dinamis menggunakan **DT**  
+- 🔄 Reactive programming pada Shiny  
 - 🗄️ Integrasi database menggunakan **DBI + RMariaDB**
-
-Tujuan utama dashboard:
-
-- Menampilkan performa game berdasarkan score dan review
-- Menyediakan rekomendasi game berdasarkan genre dan age rating
-- Menganalisis tren rilis game
-- Mengidentifikasi pola distribusi review
 
 ---
 
 # 2. Dashboard Section
 
-Dashboard terdiri dari beberapa menu utama:
-
----
-
-## 🔹 Home
-
+## Home
 Menampilkan:
 
-- Total Game
-- Total Review
-- Banner Top Game (Video Preview / Image)
-- Rekomendasi Game berdasarkan:
-  - Age Rating
-  - Genre
+- Total Game & Total Review  
+- Banner Top Game (Video Preview / Image)  
+- Rekomendasi Game berdasarkan Age Rating dan Genre  
 
----
+## Search
+Fitur pencarian dan filter interaktif:
 
-## 🔹 Search
+- Genre, Platform, Age Rating, Minimum Score
+- Tabel interaktif & klik row untuk membuka halaman game
+- Download CSV hasil filter
 
-Fitur pencarian dan filter interaktif berdasarkan:
-
-- Genre
-- Platform
-- Age Rating
-- Minimum Score
-
-Fitur tambahan:
-
-- Tabel interaktif
-- Klik baris untuk membuka halaman game
-- Filter dinamis berbasis query database
-
----
-
-## 🔹 Overview
-
-Berisi analisis statistik dan visualisasi:
+## Overview
+Menampilkan analisis statistik dan visualisasi:
 
 - Genre paling populer berdasarkan review
 - Distribusi score game
@@ -127,133 +113,52 @@ Berisi analisis statistik dan visualisasi:
 - Game dengan metascore tertinggi
 - Genre dengan rata-rata score tertinggi
 - Tren rilis game per tahun
+- Insight Cards: Peak release, score distribution, review concentration, user vs critic score
 
----
-
-## 🔹 About Team
-
-Menampilkan:
-
-- Profil anggota tim
-- Peran dan tanggung jawab masing-masing
+## About Team
+Menampilkan profil anggota tim dan peran masing-masing.
 
 ---
 
 # 3. Database Schema & Data Structure
 
-Dashboard menggunakan database relasional dengan tabel utama:
+Database relasional dengan tabel utama:
 
-- `tbl_games`
-- `tbl_reviews`
-- `tbl_users`
-- `tbl_genres`
-- `tbl_platforms`
-- `tbl_game_genres`
-- `tbl_game_platforms`
+- `tbl_games`  
+- `tbl_reviews`  
+- `tbl_users`  
+- `tbl_genres`  
+- `tbl_platforms`  
+- `tbl_game_genres`  
+- `tbl_game_platforms`  
 
-Struktur relasi dan ERD dapat dilihat pada:
+### ERD
 
-📄 [`doc/erd.pdf`](doc/erd.pdf)
+![ERD](Images/ERD.png)
 
----
+*ERD menunjukkan relasi antar tabel utama dan foreign key.*
 
-# 4. Team Contribution
+### Skema Tabel
 
-## 👩‍💻 Database Manager
-**Fokus:** Database & Query
+![Skema Tabel](Images/Skema Tabel.png)
 
-### Tanggung Jawab:
-- Mendesain struktur database (tabel, relasi, primary–foreign key)
-- Menyusun ERD
-- Menyiapkan database
-- Menulis dan menguji query SQL:
-  - JOIN antar tabel
-  - WHERE, GROUP BY
-  - Agregasi (COUNT, SUM, AVG)
-- Optimasi dasar query (index/view bila diperlukan)
-- Menyediakan query SQL siap pakai untuk backend RShiny
-
-### Batasan:
-- Tidak mengerjakan UI
-- Tidak menulis server logic Shiny
-
-### Output Wajib:
-- ERD
-- Skema tabel
-- Query SQL tervalidasi
+*Skema tabel menampilkan detail kolom, tipe data, dan constraints.*
 
 ---
 
-## ⚙️ Backend Developer
-**Fokus:** Logika Aplikasi RShiny (Server)
+# 4. Tools Used
 
-### Tanggung Jawab:
-- Menghubungkan R dengan database menggunakan DBI dan driver terkait
-- Menjalankan query SQL dari database
-- Membuat fungsi backend untuk pengambilan dan pengolahan data
-- Mengelola reaktivitas Shiny:
-  - reactive()
-  - observeEvent()
-- Menyediakan output ke frontend:
-  - renderPlot()
-  - renderTable()
-- Menangani error dan validasi input
-
-### Batasan:
-- Tidak mengatur layout UI
-- Tidak menentukan desain visual
-
-### Output Wajib:
-- File server.R sebagai input dalam app.R
-- Backend berjalan stabil dan efisien
+| Tool | Fungsi | Gambar |
+|------|-------|--------|
+| **R Studio** | IDE & Language – Lingkungan utama pengembangan skrip R dan manajemen proyek | ![RStudio](Images/5325b05b-d07f-481a-abc2-84dec8849b19.png) |
+| **R Shiny** | Web Framework – Membangun dashboard interaktif dan reaktivitas visualisasi | ![R Shiny](Images/R Shiny.png) |
+| **DBngin** | DB Engine – Menjalankan mesin database lokal untuk penyimpanan data relasional | ![DBngin](Images/DBngin.png) |
+| **TablePlus** | DB Management – Mengelola skema tabel, relasi, dan memvalidasi query SQL secara visual | ![TablePlus](Images/TablePlus.png) |
 
 ---
 
-## 🎨 Frontend Developer
-**Fokus:** Tampilan & Interaksi Pengguna
-
-### Tanggung Jawab:
-- Mendesain struktur UI dashboard (Sidebar, navbar, tabPanel)
-- Membuat komponen input:
-  - selectInput()
-  - dateRangeInput()
-- Menyusun placeholder output:
-  - plotOutput()
-  - tableOutput()
-- Mengatur tata letak dan alur interaksi pengguna
-- Mengintegrasikan output server ke UI
-- Menjaga konsistensi layout dan keterbacaan visual
-
-### Batasan:
-- Tidak mengakses database
-- Tidak menulis logika data di server
-
-### Output Wajib:
-- File ui.R sebagai input dalam app.R
-- Dashboard tampil rapi dan mudah digunakan
-
----
-
-## 📊 Data Analyst
-**Fokus:** Insight, Validasi, dan Evaluasi
-
-### Tanggung Jawab:
-- Menentukan KPI dan kebutuhan analitik dashboard
-- Memvalidasi hasil dashboard dengan data database
-- Melakukan pengujian dashboard (filter ekstrem, data kosong)
-- Menyusun interpretasi hasil dan insight utama
-- Menyusun dokumentasi dan laporan akhir
-
-### Batasan:
-- Tidak bertanggung jawab atas UI dan server utama
-
-### Output Wajib:
-- Daftar KPI dan insight
-- Dokumentasi project
-
----
-  
 # 5. Project Folder Structure
+
 ```bash
 project-dashboard/
 │
@@ -275,59 +180,3 @@ project-dashboard/
 ├── Images/
 │
 └── README.md
-```
-
-# 6. Nama Kelompok
-
----
-
-<h2 align="center">Kelompok 1 — Victory Team</h2>
-
-<br>
-
-<table align="center" cellspacing="20">
-<tr>
-
-<td align="center">
-<img src="Images/team1.jpg" width="140" style="border-radius:12px;"><br><br>
-<b>Dwi Erzalianti</b><br>
-<sub>M0501251010</sub><br>
-<sub>Database Manager</sub>
-</td>
-
-<td align="center">
-<img src="Images/team2.jpg" width="140" style="border-radius:12px;"><br><br>
-<b>Inria Purwaningsih</b><br>
-<sub>M0501251025</sub><br>
-<sub>Database Manager</sub>
-</td>
-
-<td align="center">
-<img src="Images/team3.jpg" width="140" style="border-radius:12px;"><br><br>
-<b>Dinda A.R Kusuma</b><br>
-<sub>M0501251046</sub><br>
-<sub>Data Analyst</sub>
-</td>
-
-<td align="center">
-<img src="Images/team4.jpg" width="140" style="border-radius:12px;"><br><br>
-<b>Izzul Haq</b><br>
-<sub>M0501251048</sub><br>
-<sub>Backend Developer</sub>
-</td>
-
-</tr>
-</table>
-
----
-
-<div align="center">
-
-## Academic Information
-
-STA2562 – Pemrosesan Data Besar  
-Magister Statistika dan Sains Data  
-IPB University  
-2026  
-
-</div>
