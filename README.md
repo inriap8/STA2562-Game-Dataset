@@ -219,6 +219,8 @@ Menampilkan profil anggota tim dan peran masing-masing.
 
 # 3. Database Schema & ERD
 
+### Skema Tabel
+
 <p align="center">
   <img src="Images/Skema Tabel.png" width="900">
 </p>
