@@ -451,7 +451,7 @@ STA2562-Game-Dataset/
 ---
 
 <!-- Kolaborator -->
-<a id="kolabolator"></a>
+<a id="kolaborator"></a>
 <p align="center">
   <img src="Images/Tim.png" width="400">
 </p>
