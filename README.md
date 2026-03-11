@@ -27,7 +27,7 @@
   </td>
   <td align="center">
     <a href="#skema-database-erd">
-      <img src="https://img.shields.io/badge/3-Skema%20Database%20&%20ERD-FFD6A5?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/3-Skema%20Database%20&%20ERD-90DBF4?style=for-the-badge"/>
     </a>
   </td>
 </tr>
@@ -44,16 +44,16 @@
   </td>
   <td align="center">
     <a href="#kontribusi-tim">
-      <img src="https://img.shields.io/badge/6-Kontribusi%20Tim-90DBF4?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/6-Kontribusi%20Tim-FFD6A5?style=for-the-badge"/>
     </a>
   </td>
-</tr>
-<tr>
-  <td align="center" colspan="3">
-    <a href="#anggota-tim">
-      <img src="https://img.shields.io/badge/7-Anggota%20Tim-7CE0F4?style=for-the-badge"/>
-    </a>
-  </td>
+  </tr>
+<tr> 
+  <td align="center" colspan="3"> 
+    <a href="#kolaborator"> 
+      <img src="https://img.shields.io/badge/7-Kolaborator-7CE0F4?style=for-the-badge"/> 
+    </a> 
+  </td> 
 </tr>
 </table>
 
@@ -351,5 +351,106 @@ STA2562-Game-Dataset/
 │ └── X3_load_processed_to_db.R # Script memuat data processed ke database
 │
 └── README.md # File utama dokumentasi project
+```
 
 ---
+
+
+<!-- Kontribusi Tim -->
+<a id="Kolabolator"></a>
+<p align="center">
+  <img src="Images/Tim.png" width="400">
+</p>
+
+
+## 👩‍💻 Database Manager
+**Fokus:** Database & Query
+
+### Tanggung Jawab
+- Mendesain struktur database (tabel, relasi, primary–foreign key)
+- Menyusun ERD
+- Menyiapkan database
+- Menulis dan menguji query SQL:
+  - JOIN antar tabel
+  - WHERE, GROUP BY
+  - Agregasi (COUNT, SUM, AVG)
+- Optimasi dasar query (index/view bila diperlukan)
+- Menyediakan query SQL siap pakai untuk backend RShiny
+
+### Batasan
+- Tidak mengerjakan UI
+- Tidak menulis server logic Shiny
+
+### Output Wajib
+- ERD
+- Skema tabel
+- Query SQL tervalidasi
+
+---
+
+## ⚙️ Backend Developer
+**Fokus:** Logika Aplikasi RShiny (Server)
+
+### Tanggung Jawab
+- Menghubungkan R dengan database menggunakan DBI dan driver terkait
+- Menjalankan query SQL dari database
+- Membuat fungsi backend untuk pengambilan dan pengolahan data
+- Mengelola reaktivitas Shiny:
+  - `reactive()`
+  - `observeEvent()`
+- Menyediakan output ke frontend:
+  - `renderPlot()`
+  - `renderTable()`
+- Menangani error dan validasi input
+
+### Batasan
+- Tidak mengatur layout UI
+- Tidak menentukan desain visual
+
+### Output Wajib
+- File `server.R` sebagai input dalam `app.R`
+- Backend berjalan stabil dan efisien
+
+---
+
+## 🎨 Frontend Developer
+**Fokus:** Tampilan & Interaksi Pengguna
+
+### Tanggung Jawab
+- Mendesain struktur UI dashboard (Sidebar, navbar, tabPanel)
+- Membuat komponen input:
+  - `selectInput()`
+  - `dateRangeInput()`
+- Menyusun placeholder output:
+  - `plotOutput()`
+  - `tableOutput()`
+- Mengatur tata letak dan alur interaksi pengguna
+- Mengintegrasikan output server ke UI
+- Menjaga konsistensi layout dan keterbacaan visual
+
+### Batasan
+- Tidak mengakses database
+- Tidak menulis logika data di server
+
+### Output Wajib
+- File `ui.R` sebagai input dalam `app.R`
+- Dashboard tampil rapi dan mudah digunakan
+
+---
+
+## 📊 Data Analyst
+**Fokus:** Insight, Validasi, dan Evaluasi
+
+### Tanggung Jawab
+- Menentukan KPI dan kebutuhan analitik dashboard
+- Memvalidasi hasil dashboard dengan data database
+- Melakukan pengujian dashboard (filter ekstrem, data kosong)
+- Menyusun interpretasi hasil dan insight utama
+- Menyusun dokumentasi dan laporan akhir
+
+### Batasan
+- Tidak bertanggung jawab atas UI dan server utama
+
+### Output Wajib
+- Daftar KPI dan insight
+- Dokumentasi project
