@@ -198,24 +198,10 @@ Menampilkan profil anggota tim dan peran masing-masing.
 </p>
 
 
-### Skema Tabel
-
-<p align="center">
-  <img src="Images/Skema Tabel.png" width="700">
-</p> 
-
-Database relasional dengan tabel utama:
-
-- `tbl_games`: Menyimpan informasi dasar tentang setiap game, termasuk id, judul, tanggal rilis, rating pengguna (exceptional, recommended, meh, skip), age rating, metascore, about, link url, dan link gambar dan video preview.  
-- `tbl_reviews`: Mencatat review yang diberikan oleh pengguna, termasuk ID review, ID game terkait, ID pengguna, isi review dan tanggal review.  
-- `tbl_users`: Berisi informasi tentang pengguna yang membuat review, termasuk username, dan ID pengguna.  
-- `tbl_genres`: Menyimpan daftar ID genre dan jenis genre game yang ada di database, misal Action, RPG, Adventure, dan lain-lain. 
-- `tbl_platforms`: Mencatat ID platform dan jenis platform tempat game dirilis/dimainkan, misal PC, PlayStation, Xbox, Nintendo Switch, dan sebagainya.  
-- `tbl_developers`: Menampung informasi ID pengembang game (developer) dan termasuk nama dan detail perusahaan/pengelola studio.  
-- `tbl_publisher`: Berisi informasi ID penerbit (publisher) game dan termasuk nama dan detail perusahaan yang merilis game ke pasar.
- 
-
 ### ERD
+
+Entity Relationship Diagram (ERD) digunakan untuk menggambarkan struktur basis data serta hubungan antar entitas yang terdapat di dalamnya. 
+Disini ERD disajikan menggunakan Chen Notation, yaitu notasi yang menampilkan entitas, atribut, dan relasi secara terpisah sehingga memudahkan dalam memahami hubungan antar komponen data sebelum diimplementasikan ke dalam struktur tabel basis data.
 
 <p align="center">
   <img src="Images/ERD.png" width="600">
@@ -253,6 +239,37 @@ Dashboard ini menggunakan struktur database relasional dengan tabel utama dan re
 - Primary key memastikan setiap record unik di tabelnya.  
 - Foreign key menghubungkan tabel transaksi atau referensi ke tabel master, menjaga integritas data.  
 - Relasi N:M ditangani melalui tabel relasi seperti DEVELOPED_BY, PUBLISHED_BY, HAS, dan AVAILABLE_ON.
+
+### Skema Tabel
+
+Skema tabel memberikan gambaran yang lebih teknis mengenai bagaimana data akan disimpan, dikelola, dan dihubungkan dalam sistem basis data yang akan dibangun.
+
+<p align="center">
+  <img src="Images/Skema Tabel.png" width="700">
+</p> 
+
+Database relasional dengan tabel utama:
+
+#### Master Table
+Menyimpan data utama atau data referensi dan digunakan oleh tabel lain dalam database:
+- `tbl_games`: Menyimpan informasi dasar tentang setiap game, termasuk id, judul, tanggal rilis, rating pengguna (exceptional, recommended, meh, skip), age rating, metascore, about, link url, dan link gambar dan video preview.
+- `tbl_users`: Berisi informasi tentang pengguna yang membuat review, termasuk username, dan ID pengguna.
+- `tbl_genres`: Menyimpan daftar ID genre dan jenis genre game yang ada di database, misal Action, RPG, Adventure, dan lain-lain.
+- `tbl_platforms`: Mencatat ID platform dan jenis platform tempat game dirilis/dimainkan, misal PC, PlayStation, Xbox, Nintendo Switch, dan sebagainya.
+- `tbl_developers`: Menampung informasi ID pengembang game (developer) dan termasuk nama dan detail perusahaan/pengelola studio.
+- `tbl_publisher`: Berisi informasi ID penerbit (publisher) game dan termasuk nama dan detail perusahaan yang merilis game ke pasar.
+
+#### Bridge Table
+Menghubungkan dua tabel dengan relasi many-to-many:
+- `tbl_game_developers`: Menghubungkan `developer_id` dan `game_id`
+- `tbl_game_publishers`: Menghubungkan `publisher_id` dan `game_id`
+- `tbl_game_genres`: Menghubungkan `genre_id` dan `game_id`
+- `tbl_game_platforms`: Menghubungkan `platform_id` dan `game_id`
+
+#### Fact Table
+Menyimpan data transaksi atau aktivitas yang terjadi dalam sistem:
+- `tbl_reviews`: Mencatat kejadian review yang dibuat oleh user terhadap game, termasuk ID review, ID game terkait, ID pengguna, isi review, dan tanggal review.
+ 
 
 ---
 
