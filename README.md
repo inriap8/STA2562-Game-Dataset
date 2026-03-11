@@ -123,19 +123,19 @@ Distribusi skor game membantu melihat persebaran kualitas game berdasarkan ratin
 ### 3. Games Highest Metascore
 Menampilkan game dengan nilai kritikus tertinggi, berguna untuk analisis kualitas review profesional.
 <p align="center">
-  <img src="Images/Games Highest Metascore.png" width="500">
+  <img src="Images/Games Highest Metascore.png" width="300">
 </p>
 
 ### 4. Games Highest Score
 Menunjukkan game dengan skor pengguna tertinggi, membantu menilai kepuasan pemain.
 <p align="center">
-  <img src="Images/Games Highest Score.png" width="500">
+  <img src="Images/Games Highest Score.png" width="300">
 </p>
 
 ### 5. Genre Highest Average Score
 Mengidentifikasi genre dengan rata-rata skor tertinggi, berguna untuk rekomendasi genre populer.
 <p align="center">
-  <img src="Images/Genre Highest Average Score.png" width="500">
+  <img src="Images/Genre Highest Average Score.png" width="300">
 </p>
 
 ### 6. Genre Popularity Based on Reviews
@@ -147,31 +147,31 @@ Visualisasi genre paling populer berdasarkan jumlah review, menilai engagement k
 ### 7. Most Popular Age Rating
 Menampilkan age rating dengan jumlah game terbanyak untuk mengetahui target audiens dominan.
 <p align="center">
-  <img src="Images/Most Popular Age Rating.png" width="500">
+  <img src="Images/Most Popular Age Rating.png" width="300">
 </p>
 
 ### 8. Most Popular Genre
 Menunjukkan genre dengan total review terbanyak, berguna untuk analisis popularitas.
 <p align="center">
-  <img src="Images/Most Popular Genre.png" width="500">
+  <img src="Images/Most Popular Genre.png" width="300">
 </p>
 
 ### 9. Most Popular Platform
 Menampilkan platform game paling populer berdasarkan jumlah occurrences/total review.
 <p align="center">
-  <img src="Images/Most Popular Platform.png" width="500">
+  <img src="Images/Most Popular Platform.png" width="300">
 </p>
 
 ### 10. Review Overview
 Memberikan overview jumlah review per game, membandingkan review user vs critic.
 <p align="center">
-  <img src="Images/Review Overview.jpeg" width="600">
+  <img src="Images/Review Overview.jpeg" width="800">
 </p>
 
 ### 11. Top Game 2016
 Menunjukkan game terbaik tahun 2016 berdasarkan skor dan jumlah review.
 <p align="center">
-  <img src="Images/Top Game 2016.png" width="500">
+  <img src="Images/Top Game 2016.png" width="300">
 </p>
 
 ### 12. Top Games by Score
@@ -183,7 +183,7 @@ Menampilkan daftar 10 game terbaik berdasarkan skor, termasuk perbandingan skor 
 ### 13. Key Insights
 Menyediakan ringkasan insight utama dari data game seperti peak release, score distribution, dan review concentration.
 <p align="center">
-  <img src="Images/Key Insights.png" width="600">
+  <img src="Images/Key Insights.png" width="800">
 </p>
 
 ## About Team
