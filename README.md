@@ -66,7 +66,7 @@
   <img src="Images/Deskripsi.png" width="500">
 </p> 
 
-Game Platform Dashboard adalah aplikasi interaktif berbasis **R Shiny** yang dirancang untuk menganalisis dan memvisualisasikan data game dari berbagai aspek.
+Game Platform Dashboard adalah aplikasi interaktif berbasis **R Shiny** yang dirancang untuk menganalisis dan memvisualisasikan data game dari berbagai aspek secara menyeluruh, mulai dari performa individual game hingga tren genre dan platform. Dashboard ini memungkinkan pengguna untuk mengeksplorasi data secara interaktif, memfilter berdasarkan genre, platform, dan age rating, serta membandingkan skor dan review dari pengguna maupun kritikus. Dengan integrasi database relasional, visualisasi interaktif menggunakan **Plotly**, dan tabel dinamis **DT**, dashboard ini memberikan insight yang berguna bagi pengembang, penerbit, dan pemain game untuk mengambil keputusan berbasis data, mengidentifikasi tren populer, dan memahami preferensi komunitas gamer secara mendalam.
 
 **Tujuan Proyek:**
 
@@ -453,6 +453,29 @@ STA2562-Game-Dataset/
 <!-- Kolaborator -->
 <a id="kolabolator"></a>
 <p align="center">
-  <img src="Images/tim.png" width="400">
+  <img src="Images/Tim.png" width="400">
 </p>
 
+<p align="center">
+  Berikut adalah anggota tim yang berkontribusi dalam pengembangan dashboard ini.
+</p>
+
+<table align="center" cellspacing="20">
+<tr>
+  <td align="center">
+    <img src="Images/team1.png" width="270">
+  </td>
+
+  <td align="center">
+    <img src="Images/team2.png" width="270">
+  </td>
+
+  <td align="center">
+    <img src="Images/team3.png" width="270">
+  </td>
+
+  <td align="center">
+    <img src="Images/team4.png" width="270">
+  </td>
+</tr>
+</table>
