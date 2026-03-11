@@ -357,9 +357,9 @@ STA2562-Game-Dataset/
 
 
 <!-- Kontribusi Tim -->
-<a id="Kolabolator"></a>
+<a id="kontribusi-tim"></a>
 <p align="center">
-  <img src="Images/Tim.png" width="400">
+  <img src="Images/Kontribusi.png" width="400">
 </p>
 
 
@@ -448,9 +448,11 @@ STA2562-Game-Dataset/
 - Menyusun interpretasi hasil dan insight utama
 - Menyusun dokumentasi dan laporan akhir
 
-### Batasan
-- Tidak bertanggung jawab atas UI dan server utama
+---
 
-### Output Wajib
-- Daftar KPI dan insight
-- Dokumentasi project
+<!-- Kolaborator -->
+<a id="kolabolator"></a>
+<p align="center">
+  <img src="Images/tim.png" width="400">
+</p>
+
