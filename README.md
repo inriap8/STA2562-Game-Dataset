@@ -92,6 +92,14 @@ Game Platform Dashboard adalah aplikasi interaktif berbasis **R Shiny** yang dir
 
 
 ## Home
+
+<p align="center">
+  <video width="600" controls>
+    <source src="Dokumenrasi/HOME.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</p>
+
 Menampilkan:
 
 - Total Game & Total Review  
@@ -208,37 +216,6 @@ Disini ERD disajikan menggunakan Chen Notation, yaitu notasi yang menampilkan en
 </p>
 
 *ERD menunjukkan relasi antar tabel utama dan foreign key.*
-
-Dashboard ini menggunakan struktur database relasional dengan tabel utama dan relasinya. Berikut penjelasan primary key dan foreign key tiap tabel:
-
-#### Primary Key (PK)
-- `game_id` (tabel GAME)
-- `review_id` (tabel REVIEW)
-- `user_id` (tabel USER)
-- `developer_id` (tabel DEVELOPER)
-- `publisher_id` (tabel PUBLISHER)
-- `genre_id` (tabel GENRE)
-- `platform_id` (tabel PLATFORM)
-
-#### Foreign Key (FK)
-- `developer_id` pada tabel GAME → menghubungkan ke tabel DEVELOPER
-- `publisher_id` pada tabel GAME → menghubungkan ke tabel PUBLISHER
-- `genre_id` pada tabel GAME → menghubungkan ke tabel GENRE
-- `platform_id` pada tabel GAME → menghubungkan ke tabel PLATFORM
-- `game_id` pada tabel REVIEW → menghubungkan ke tabel GAME
-- `user_id` pada tabel REVIEW → menghubungkan ke tabel USER
-
-#### Relasi Tabel
-- Tabel DEVELOPED_BY menghubungkan `developer_id` dan `game_id`
-- Tabel PUBLISHED_BY menghubungkan `publisher_id` dan `game_id`
-- Tabel HAS menghubungkan `genre_id` dan `game_id`
-- Tabel AVAILABLE_ON menghubungkan `platform_id` dan `game_id`
-- Tabel WRITES menghubungkan `review_id`, `game_id`, dan `user_id`
-
-**Catatan:**  
-- Primary key memastikan setiap record unik di tabelnya.  
-- Foreign key menghubungkan tabel transaksi atau referensi ke tabel master, menjaga integritas data.  
-- Relasi N:M ditangani melalui tabel relasi seperti DEVELOPED_BY, PUBLISHED_BY, HAS, dan AVAILABLE_ON.
 
 ### Skema Tabel
 
