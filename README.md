@@ -16,43 +16,41 @@
 <table align="center" border="0">
 <tr>
   <td align="center">
-    <a href="#1-Deskripsi-Dashboard">
+    <a href="#deskripsi-dashboard">
       <img src="https://img.shields.io/badge/1-Deskripsi%20Dashboard-A5D8FF?style=for-the-badge"/>
     </a>
   </td>
   <td align="center">
-    <a href="#2-Bagian-Dashboard">
+    <a href="#bagian-dashboard">
       <img src="https://img.shields.io/badge/2-Bagian%20Dashboard-B2F2BB?style=for-the-badge"/>
     </a>
   </td>
   <td align="center">
-    <a href="#3-Skema-Database-ERD">
+    <a href="#skema-database-erd">
       <img src="https://img.shields.io/badge/3-Skema%20Database%20&%20ERD-FFD6A5?style=for-the-badge"/>
     </a>
   </td>
 </tr>
-
 <tr>
   <td align="center">
-    <a href="#4-Tools">
+    <a href="#tools">
       <img src="https://img.shields.io/badge/4-Tools-FFADAD?style=for-the-badge"/>
     </a>
   </td>
   <td align="center">
-    <a href="#5-Struktur-Folder">
+    <a href="#struktur-folder">
       <img src="https://img.shields.io/badge/5-Struktur%20Folder-CDB4DB?style=for-the-badge"/>
     </a>
   </td>
   <td align="center">
-    <a href="#6-Kontribusi-Tim">
+    <a href="#kontribusi-tim">
       <img src="https://img.shields.io/badge/6-Kontribusi%20Tim-90DBF4?style=for-the-badge"/>
     </a>
   </td>
 </tr>
-
 <tr>
   <td align="center" colspan="3">
-    <a href="#7-Anggota-Tim">
+    <a href="#anggota-tim">
       <img src="https://img.shields.io/badge/7-Anggota%20Tim-7CE0F4?style=for-the-badge"/>
     </a>
   </td>
@@ -193,12 +191,6 @@ Menampilkan profil anggota tim dan peran masing-masing.
 
 ---
 
-<p align="center">
-  <img src="Images/Skema.png" width="500">
-</p> 
-
-### Skema Tabel
-
 <!-- Skema Database & ERD -->
 <a id="skema-database-erd"></a>
 <p align="center">
@@ -207,7 +199,13 @@ Menampilkan profil anggota tim dan peran masing-masing.
 <p align="center">
   <img src="Images/Skema Tabel.png" width="900">
 </p>
+ 
 
+### Skema Tabel
+
+<p align="center">
+  <img src="Images/Skema Tabel.png" width="500">
+</p> 
 
 Database relasional dengan tabel utama:
 
@@ -259,9 +257,12 @@ Dashboard ini menggunakan struktur database relasional dengan tabel utama dan re
 
 ---
 
+<!-- Tools -->
+<a id="tools"></a>
 <p align="center">
   <img src="Images/Tools.png" width="350">
-</p> 
+</p>
+
 
 | Tool | Fungsi | Gambar |
 |------|-------|--------|
@@ -272,9 +273,12 @@ Dashboard ini menggunakan struktur database relasional dengan tabel utama dan re
 
 ---
 
+<!-- Struktur Folder -->
+<a id="struktur-folder"></a>
 <p align="center">
   <img src="Images/Folder.png" width="400">
-</p> 
+</p>
+
 
 ```bash
 project-dashboard/
@@ -297,3 +301,6 @@ project-dashboard/
 ├── Images/
 │
 └── README.md
+
+
+---
