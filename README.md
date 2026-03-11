@@ -281,26 +281,76 @@ Dashboard ini menggunakan struktur database relasional dengan tabel utama dan re
 
 
 ```bash
-project-dashboard/
+STA2562-Game-Dataset/
 │
-├── data/
-│   ├── raw/
-│   └── processed/
+├── App/ # Folder utama aplikasi R Shiny
+│ ├── App.R # File utama yang menjalankan aplikasi
+│ ├── Ui.R # Komponen UI (tampilan) dashboard
+│ ├── Server.R # Komponen server (backend) dashboard
+│ └── README.md # Penjelasan singkat terkait folder App
 │
-├── app/
-│   ├── app.R
-│   ├── ui.R
-│   └── server.R
+├── Connection/ # Folder untuk skrip koneksi database
+│ └── connection_database.R # Script untuk menghubungkan R ke database
 │
-├── connection/
-│   └── db_connection.R
+├── Data/ # Folder untuk data proyek
+│ ├── Raw/ # Data mentah dari sumber eksternal
+│ │ └── Dataset Game Raw.csv
+│ │
+│ └── Processed/ # Data hasil preprocessing
+│ ├── tbl_developers.csv
+│ ├── tbl_game_developers.csv
+│ ├── tbl_game_genres.csv
+│ ├── tbl_game_platforms.csv
+│ ├── tbl_game_publishers.csv
+│ ├── tbl_games.csv
+│ ├── tbl_genres.csv
+│ ├── tbl_platforms.csv
+│ ├── tbl_publishers.csv
+│ ├── tbl_reviews.csv
+│ └── tbl_users.csv
 │
-├── doc/
-│   └── erd.pdf
+├── Doc/ # Folder dokumentasi
+│ └── Basis Data dan ERD.pdf
 │
-├── Images/
+├── Images/ # Folder untuk semua gambar visualisasi dan ilustrasi
+│ ├── Bagian.png
+│ ├── Dbngin.png
+│ ├── Deskripsi.png
+│ ├── ERD.png
+│ ├── Folder.png
+│ ├── Game Releases Over Time.jpeg
+│ ├── Game Score Distribution.jpeg
+│ ├── Games Highest Metascore.png
+│ ├── Games Highest Score.png
+│ ├── Genre Highest Average Score.png
+│ ├── Genre Popularity Based on Reviews.jpeg
+│ ├── Header Github.jpeg
+│ ├── Key Insights.png
+│ ├── Menu.png
+│ ├── Most Popular Age Rating.png
+│ ├── Most Popular Genre.png
+│ ├── Most Popular Platform.png
+│ ├── R Shiny.png
+│ ├── Review Overview.jpeg
+│ ├── Rstudio.png
+│ ├── Skema Tabel.png
+│ ├── Skema.png
+│ ├── Tableplus.png
+│ ├── Tim.png
+│ ├── Tools.png
+│ ├── Top Game 2016.png
+│ ├── Top Games by Score.jpeg
+│ ├── team1.png
+│ ├── team2.png
+│ ├── team3.png
+│ └── team4.png
 │
-└── README.md
-
+├── Script/ # Folder berisi script R tambahan dan query
+│ ├── Query.txt # SQL query referensi
+│ ├── X1_load_raw_to_db.R # Script memuat data raw ke database
+│ ├── X2_etl_processing.R # Script transformasi dan pembersihan data
+│ └── X3_load_processed_to_db.R # Script memuat data processed ke database
+│
+└── README.md # File utama dokumentasi project
 
 ---
