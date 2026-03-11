@@ -59,8 +59,11 @@
 </tr>
 </table>
 
+
 ---
 
+<!-- Deskripsi Dashboard -->
+<a id="deskripsi-dashboard"></a>
 <p align="center">
   <img src="Images/Deskripsi.png" width="500">
 </p> 
@@ -83,9 +86,12 @@ Game Platform Dashboard adalah aplikasi interaktif berbasis **R Shiny** yang dir
 
 ---
 
+<!-- Bagian Dashboard -->
+<a id="bagian-dashboard"></a>
 <p align="center">
   <img src="Images/Bagian.png" width="500">
-</p> 
+</p>
+
 
 ## Home
 Menampilkan:
@@ -193,6 +199,11 @@ Menampilkan profil anggota tim dan peran masing-masing.
 
 ### Skema Tabel
 
+<!-- Skema Database & ERD -->
+<a id="skema-database-erd"></a>
+<p align="center">
+  <img src="Images/Skema.png" width="500">
+</p>
 <p align="center">
   <img src="Images/Skema Tabel.png" width="900">
 </p>
