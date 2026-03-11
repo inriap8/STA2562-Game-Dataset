@@ -95,7 +95,7 @@ Game Platform Dashboard adalah aplikasi interaktif berbasis **R Shiny** yang dir
 
 <p align="center">
   <video width="600" controls>
-    <source src="Dokumenrasi/HOME.mp4" type="video/mp4">
+    <source src="Dokumentasi/HOME.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>
