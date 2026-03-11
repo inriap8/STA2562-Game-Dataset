@@ -310,10 +310,6 @@ STA2562-Game-Dataset/
 │ │ ├── HOME.mp4
 │ │ ├── OVERVIEW.mp4
 │ │ └── SEARCH.mp4
-│ ├── Gambar/
-│ │ ├── Dokumentasi Tambahan 1.png
-│ │ ├── Dokumentasi Tambahan 2.png
-│ │ └── Tim.png
 │ └── README.md – Penjelasan isi folder dokumentasi
 │
 ├── Images/ – Semua gambar visualisasi dan ilustrasi dashboard / analisis
