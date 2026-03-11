@@ -276,20 +276,19 @@ Menyimpan data transaksi atau aktivitas yang terjadi dalam sistem:
 ```bash
 STA2562-Game-Dataset/
 │
-├── App/ # Folder utama aplikasi R Shiny
-│ ├── App.R # File utama yang menjalankan aplikasi
-│ ├── Ui.R # Komponen UI (tampilan) dashboard
-│ ├── Server.R # Komponen server (backend) dashboard
-│ └── README.md # Penjelasan singkat terkait folder App
+├── App/ – Folder utama aplikasi R Shiny
+│ ├── App.R
+│ ├── Ui.R
+│ ├── Server.R
+│ └── README.md
 │
-├── Connection/ # Folder untuk skrip koneksi database
-│ └── connection_database.R # Script untuk menghubungkan R ke database
+├── Connection/ – Folder skrip koneksi database
+│ └── connection_database.R
 │
-├── Data/ # Folder untuk data proyek
-│ ├── Raw/ # Data mentah dari sumber eksternal
+├── Data/ – Folder untuk data proyek
+│ ├── Raw/ – Data mentah
 │ │ └── Dataset Game Raw.csv
-│ │
-│ └── Processed/ # Data hasil preprocessing
+│ └── Processed/ – Data hasil preprocessing
 │ ├── tbl_developers.csv
 │ ├── tbl_game_developers.csv
 │ ├── tbl_game_genres.csv
@@ -302,10 +301,22 @@ STA2562-Game-Dataset/
 │ ├── tbl_reviews.csv
 │ └── tbl_users.csv
 │
-├── Doc/ # Folder dokumentasi
+├── Doc/ – Dokumentasi formal / PDF
 │ └── Basis Data dan ERD.pdf
 │
-├── Images/ # Folder untuk semua gambar visualisasi dan ilustrasi
+├── Dokumentasi/ – Semua dokumentasi visual & video
+│ ├── Video/
+│ │ ├── ABOUT TEAM.mp4
+│ │ ├── HOME.mp4
+│ │ ├── OVERVIEW.mp4
+│ │ └── SEARCH.mp4
+│ ├── Gambar/
+│ │ ├── Dokumentasi Tambahan 1.png
+│ │ ├── Dokumentasi Tambahan 2.png
+│ │ └── Tim.png
+│ └── README.md – Penjelasan isi folder dokumentasi
+│
+├── Images/ – Semua gambar visualisasi dan ilustrasi dashboard / analisis
 │ ├── Bagian.png
 │ ├── Dbngin.png
 │ ├── Deskripsi.png
@@ -324,12 +335,11 @@ STA2562-Game-Dataset/
 │ ├── Most Popular Genre.png
 │ ├── Most Popular Platform.png
 │ ├── R Shiny.png
-│ ├── Review Overview.jpeg
 │ ├── Rstudio.png
+│ ├── Review Overview.jpeg
 │ ├── Skema Tabel.png
 │ ├── Skema.png
 │ ├── Tableplus.png
-│ ├── Tim.png
 │ ├── Tools.png
 │ ├── Top Game 2016.png
 │ ├── Top Games by Score.jpeg
@@ -338,13 +348,13 @@ STA2562-Game-Dataset/
 │ ├── team3.png
 │ └── team4.png
 │
-├── Script/ # Folder berisi script R tambahan dan query
-│ ├── Query.txt # SQL query referensi
-│ ├── X1_load_raw_to_db.R # Script memuat data raw ke database
-│ ├── X2_etl_processing.R # Script transformasi dan pembersihan data
-│ └── X3_load_processed_to_db.R # Script memuat data processed ke database
+├── Script/ – Folder script R & query
+│ ├── Query.txt
+│ ├── X1_load_raw_to_db.R
+│ ├── X2_etl_processing.R
+│ └── X3_load_processed_to_db.R
 │
-└── README.md # File utama dokumentasi project
+└── README.md – Dokumentasi utama proyek
 ```
 
 ---
