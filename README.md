@@ -13,57 +13,49 @@
 </p>
 
 
-<br>
-
-<table align="center" cellpadding="12">
+<table align="center" border="0">
 <tr>
-<td align="center">
-<a href="#1-dashboard-description">
-  <img src="https://img.shields.io/badge/1-Dashboard%20Description-A5D8FF?style=for-the-badge"/>
-</a>
-</td>
-
-<td align="center">
-<a href="#2-dashboard-section">
-  <img src="https://img.shields.io/badge/2-Dashboard%20Section-B2F2BB?style=for-the-badge"/>
-</a>
-</td>
+  <td align="center">
+    <a href="#1-Deskripsi-Dashboard">
+      <img src="https://img.shields.io/badge/1-Deskripsi%20Dashboard-A5D8FF?style=for-the-badge"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="#2-Bagian-Dashboard">
+      <img src="https://img.shields.io/badge/2-Bagian%20Dashboard-B2F2BB?style=for-the-badge"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="#3-Skema-Database-ERD">
+      <img src="https://img.shields.io/badge/3-Skema%20Database%20&%20ERD-FFD6A5?style=for-the-badge"/>
+    </a>
+  </td>
 </tr>
 
 <tr>
-<td align="center">
-<a href="#3-database-schema--data-structure">
-  <img src="https://img.shields.io/badge/3-Database%20Schema%20&%20Data-FFD6A5?style=for-the-badge"/>
-</a>
-</td>
-
-<td align="center">
-<a href="#4-tools-used">
-  <img src="https://img.shields.io/badge/4-Tools%20Used-FFADAD?style=for-the-badge"/>
-</a>
-</td>
+  <td align="center">
+    <a href="#4-Tools">
+      <img src="https://img.shields.io/badge/4-Tools-FFADAD?style=for-the-badge"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="#5-Struktur-Folder">
+      <img src="https://img.shields.io/badge/5-Struktur%20Folder-CDB4DB?style=for-the-badge"/>
+    </a>
+  </td>
+  <td align="center">
+    <a href="#6-Kontribusi-Tim">
+      <img src="https://img.shields.io/badge/6-Kontribusi%20Tim-90DBF4?style=for-the-badge"/>
+    </a>
+  </td>
 </tr>
 
 <tr>
-<td align="center">
-<a href="#5-project-folder-structure">
-  <img src="https://img.shields.io/badge/5-Project%20Folder%20Structure-CDB4DB?style=for-the-badge"/>
-</a>
-</td>
-
-<td align="center">
-<a href="#6-team-contribution">
-  <img src="https://img.shields.io/badge/6-Team%20Contribution-90DBF4?style=for-the-badge"/>
-</a>
-</td>
-</tr>
-
-<tr>
-<td align="center">
-<a href="#7-team-members">
-  <img src="https://img.shields.io/badge/7-Team%20Members-7CE0F3?style=for-the-badge"/>
-</a>
-</td>
+  <td align="center" colspan="3">
+    <a href="#7-Anggota-Tim">
+      <img src="https://img.shields.io/badge/7-Anggota%20Tim-7CE0F4?style=for-the-badge"/>
+    </a>
+  </td>
 </tr>
 </table>
 
