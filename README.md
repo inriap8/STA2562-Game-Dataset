@@ -196,15 +196,12 @@ Menampilkan profil anggota tim dan peran masing-masing.
 <p align="center">
   <img src="Images/Skema.png" width="500">
 </p>
-<p align="center">
-  <img src="Images/Skema Tabel.png" width="900">
-</p>
- 
+
 
 ### Skema Tabel
 
 <p align="center">
-  <img src="Images/Skema Tabel.png" width="500">
+  <img src="Images/Skema Tabel.png" width="700">
 </p> 
 
 Database relasional dengan tabel utama:
@@ -220,7 +217,9 @@ Database relasional dengan tabel utama:
 
 ### ERD
 
-![ERD](Images/ERD.png)
+<p align="center">
+  <img src="Images/ERD.png" width="600">
+</p>
 
 *ERD menunjukkan relasi antar tabel utama dan foreign key.*
 
